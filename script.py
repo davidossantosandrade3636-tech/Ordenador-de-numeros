@@ -9,7 +9,7 @@ while True:
        print('numero adicionado com sucesso')
     resp=input('deseja continuar?[s/n]')
 
-if resp=='n':
+   if resp=='n':
         break
 lista.sort()
 print(f'os numeros foram {lista}')
