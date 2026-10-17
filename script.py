@@ -1,10 +1,19 @@
-frase=input("digite uma palavra ou frase:")
-limpa=frase.lower().replace(" ","")
-print(limpa)
-invertida=limpa[::-1]
+lista=[]
+while True:
+    try:
+     num=int(input('digite um valor:'))
+     if num in lista:
+      print('numero duplicado não adicionado')
 
-if limpa == invertida:
-    print('É um palindromo')
+     if num not in lista:
+        lista.append(num)
+        print('numero adicionado com sucesso')
+     resp=input('deseja continuar?[s/n]')
 
-else:
-    print('Não é um palindromo')
+     if resp=='n':
+       break
+
+    except ValueError:
+         print('por favor digite um numero')
+lista.sort()
+print(f'os numeros foram {lista}')
